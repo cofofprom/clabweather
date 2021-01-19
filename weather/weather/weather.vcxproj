@@ -158,6 +158,7 @@
   <ItemGroup>
     <Text Include="data.txt" />
     <Text Include="greet.txt" />
+    <Text Include="Reactions.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ReadTemplates.h" />

@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include "ReadTemplates.h"
 #include <stdio.h>
 #include <string.h>
@@ -30,6 +32,11 @@ int readAllTemp(char buf[][512])
 	return 0;
 }
 
+int readAllTempNight(char buf[][512])
+{
+	return 0;
+}
+
 int readAllOsadki(char buf[][512])
 {
 	return 0;
@@ -46,6 +53,11 @@ int readAllWind(char buf[][512])
 }
 
 int readAllJawlenie(char buf[][512])
+{
+	return 0;
+}
+
+int readAllBye(char buf[][512])
 {
 	return 0;
 }

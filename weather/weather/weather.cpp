@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <locale.h>
+#include "ReadTemplates.h"
 
 typedef struct 
 {
@@ -19,6 +20,7 @@ typedef struct
 int main()
 {
 	setlocale(LC_ALL, "ru");
+	FILE* output = stdout;
 	srand(time(0));
 	rand();
 	FILE* dataIn = fopen("data.txt", "r");
@@ -43,10 +45,19 @@ int main()
 	}
 	
 	char greetings[20][512] = { 0 };
+	char date[20][512] = { 0 };
+	char temp[20][512] = { 0 };
+	char osadki[20][512] = { 0 };
+	char pressure[20][512] = { 0 };
+	char speed[20][512] = { 0 };
+	char jawlenie[20][512] = { 0 };
+	char bye[20][512] = { 0 };
 	int grettingsSize = readAllGreets(greetings);
 
-	for(int i = 0; i < 20; i++)
-		printf("%s\n", greetings[rand() % grettingsSize]);
+	// приветствие дата (рандомно температура) (рандомно осадки или явления) (рандомно давление или скорость ветра) прощание
+	fprintf(output, "%s ", greetings[rand() % grettingsSize]);
+
+
 
 	return 0;
 }
