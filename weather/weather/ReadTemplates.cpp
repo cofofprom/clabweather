@@ -3,6 +3,7 @@
 #include "ReadTemplates.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int readAllGreets(char buf[][512])
 {
@@ -19,7 +20,7 @@ int readAllGreets(char buf[][512])
 
 	fclose(greetIn);
 
-	return bufc - 1;
+	return bufc;
 }
 
 int readAllDate(char buf[][512])
@@ -37,7 +38,7 @@ int readAllDate(char buf[][512])
 
 	fclose(greetIn);
 
-	return bufc - 1;
+	return bufc;
 }
 
 int readAllTemp(char buf[][512])
@@ -55,7 +56,7 @@ int readAllTemp(char buf[][512])
 
 	fclose(greetIn);
 
-	return bufc - 1;
+	return bufc;
 }
 
 int readAllTempNight(char buf[][512])
@@ -73,7 +74,7 @@ int readAllTempNight(char buf[][512])
 
 	fclose(greetIn);
 
-	return bufc - 1;
+	return bufc;
 }
 
 int readAllReactions(char buf[][512])
@@ -91,7 +92,7 @@ int readAllReactions(char buf[][512])
 
 	fclose(greetIn);
 
-	return bufc - 1;
+	return bufc;
 }
 
 int readAllOsadki(char buf[][512])
@@ -109,7 +110,7 @@ int readAllOsadki(char buf[][512])
 
 	fclose(greetIn);
 
-	return bufc - 1;
+	return bufc;
 }
 
 int readAllPressure(char buf[][512])
@@ -127,7 +128,7 @@ int readAllPressure(char buf[][512])
 
 	fclose(greetIn);
 
-	return bufc - 1;
+	return bufc;
 }
 
 int readAllWind(char buf[][512])
@@ -145,7 +146,7 @@ int readAllWind(char buf[][512])
 
 	fclose(greetIn);
 
-	return bufc - 1;
+	return bufc;
 }
 
 int readAllJawlenie(char buf[][512])
@@ -163,7 +164,7 @@ int readAllJawlenie(char buf[][512])
 
 	fclose(greetIn);
 
-	return bufc - 1;
+	return bufc;
 }
 
 int readAllBye(char buf[][512])
@@ -181,5 +182,23 @@ int readAllBye(char buf[][512])
 
 	fclose(greetIn);
 
-	return bufc - 1;
+	return bufc;
+}
+
+char* pickRandomTemp()
+{
+	char tTemplates[20][512] = { 0 };
+	switch (rand() % 2)
+	{
+	case 0:
+		int sz = readAllTemp(tTemplates);
+		return (tTemplates[rand() % sz]);
+		break;
+	case 1:
+		readAllTempNight(tTemplates);
+		return (tTemplates[rand() % sz]);
+		break;
+
+
+	}
 }

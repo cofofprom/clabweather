@@ -6,17 +6,6 @@
 #include <locale.h>
 #include "ReadTemplates.h"
 
-typedef struct 
-{
-	char date[512];
-	int dayTemp;
-	int nightTemp;
-	char osadki[512];
-	int pressure;
-	int wSpeed;
-	char jawlenie[512];
-} RECORD;
-
 int main()
 {
 	setlocale(LC_ALL, "ru");
@@ -43,16 +32,6 @@ int main()
 		fscanf(dataIn, "%s", buf);
 		strcpy(test.jawlenie, buf);
 	}
-	
-	char greetings[20][512] = { 0 };
-	char date[20][512] = { 0 };
-	char temp[20][512] = { 0 };
-	char osadki[20][512] = { 0 };
-	char pressure[20][512] = { 0 };
-	char speed[20][512] = { 0 };
-	char jawlenie[20][512] = { 0 };
-	char bye[20][512] = { 0 };
-	int grettingsSize = readAllGreets(greetings);
 
 	// приветствие дата (рандомно температура) (рандомно осадки или явления) (рандомно давление или скорость ветра) прощание
 	fprintf(output, "%s ", greetings[rand() % grettingsSize]);
