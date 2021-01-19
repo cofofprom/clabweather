@@ -14,6 +14,8 @@ typedef struct
 	char jawlenie[512];
 } RECORD;
 
+
+
 int main()
 {
 	FILE* dataIn = fopen("data.txt", "r");
@@ -36,6 +38,8 @@ int main()
 		fscanf(dataIn, "%s", buf);
 		strcpy(test.jawlenie, buf);
 	}
+	
+
 
 	return 0;
 }
