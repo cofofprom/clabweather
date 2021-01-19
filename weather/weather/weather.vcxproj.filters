@@ -32,6 +32,30 @@
     <Text Include="Reactions.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
+    <Text Include="Temp.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="Date.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="Wind.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="Osadki.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="Pressure.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="Bye.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="Jawlenie.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="TempNight.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ReadTemplates.h">

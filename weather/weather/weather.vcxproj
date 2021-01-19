@@ -156,9 +156,17 @@
     <ClCompile Include="weather.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="Bye.txt" />
     <Text Include="data.txt" />
+    <Text Include="Date.txt" />
     <Text Include="greet.txt" />
+    <Text Include="Jawlenie.txt" />
+    <Text Include="Osadki.txt" />
+    <Text Include="Pressure.txt" />
     <Text Include="Reactions.txt" />
+    <Text Include="Temp.txt" />
+    <Text Include="TempNight.txt" />
+    <Text Include="Wind.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ReadTemplates.h" />
