@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <time.h>
+#include <locale.h>
 
 typedef struct 
 {
@@ -14,10 +16,11 @@ typedef struct
 	char jawlenie[512];
 } RECORD;
 
-
-
 int main()
 {
+	setlocale(LC_ALL, "ru");
+	srand(time(0));
+	rand();
 	FILE* dataIn = fopen("data.txt", "r");
 	char buf[1024] = { 0 };
 	RECORD test = { 0 };
@@ -39,7 +42,11 @@ int main()
 		strcpy(test.jawlenie, buf);
 	}
 	
+	char greetings[20][512] = { 0 };
+	int grettingsSize = readAllGreets(greetings);
 
+	for(int i = 0; i < 20; i++)
+		printf("%s\n", greetings[rand() % grettingsSize]);
 
 	return 0;
 }
