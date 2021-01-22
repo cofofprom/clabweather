@@ -185,20 +185,19 @@ int readAllBye(char buf[][512])
 	return bufc;
 }
 
-char* pickRandomTemp()
+void printRandomTemp(int temp, FILE* out)
 {
 	char tTemplates[20][512] = { 0 };
+	int sz = 0;
 	switch (rand() % 2)
 	{
 	case 0:
-		int sz = readAllTemp(tTemplates);
-		return (tTemplates[rand() % sz]);
+		sz = readAllTemp(tTemplates);
 		break;
 	case 1:
-		readAllTempNight(tTemplates);
-		return (tTemplates[rand() % sz]);
+		sz = readAllTempNight(tTemplates);
 		break;
-
-
 	}
+
+	fprintf(out, tTemplates[rand() % sz], temp);
 }

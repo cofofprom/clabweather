@@ -1,4 +1,5 @@
 #pragma once
+#include <stdio.h>
 
 typedef struct
 {
@@ -22,4 +23,4 @@ int readAllWind(char buf[][512]);
 int readAllJawlenie(char buf[][512]);
 int readAllBye(char buf[][512]);
 
-char* pickRandomTemp();
+void printRandomTemp(int temp, FILE* out);

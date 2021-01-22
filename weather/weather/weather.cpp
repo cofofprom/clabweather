@@ -34,7 +34,7 @@ int main()
 	}
 
 	// приветствие дата (рандомно температура) (рандомно осадки или явления) (рандомно давление или скорость ветра) прощание
-	fprintf(output, "%s ", greetings[rand() % grettingsSize]);
+	printRandomTemp(228, output);
 
 
 
