@@ -23,4 +23,12 @@ int readAllWind(char buf[][512]);
 int readAllJawlenie(char buf[][512]);
 int readAllBye(char buf[][512]);
 
-void printRandomTemp(int temp, FILE* out);
+void printHello(FILE* out);
+void printDayTemp(int temp, FILE* out);
+void printDate(char* date, FILE* out);
+void printNightTemp(int temp, FILE* out);
+void printOsadki(char* os, FILE* out);
+void printPresure(int pr, FILE* out);
+void printWind(int wspeed, FILE* out);
+void printJawlenie(char* w, FILE* out);
+void printBye(FILE* out);

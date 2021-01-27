@@ -34,7 +34,24 @@ int main()
 	}
 
 	// приветствие дата (рандомно температура) (рандомно осадки или явления) (рандомно давление или скорость ветра) прощание
-	printRandomTemp(228, output);
+	printHello(output);
+	fprintf(output, " ");
+	printDate(test.date, output);
+	fprintf(output, " ");
+	printDayTemp(test.dayTemp, output);
+	fprintf(output, " ");
+	printNightTemp(test.nightTemp, output);
+	fprintf(output, " ");
+	printOsadki(test.osadki, output);
+	fprintf(output, " ");
+	printJawlenie(test.jawlenie, output);
+	fprintf(output, " ");
+	printPresure(test.pressure, output);
+	fprintf(output, " ");
+	printWind(test.wSpeed, output);
+	fprintf(output, " ");
+	printBye(output);
+	fprintf(output, "\n");
 
 
 
