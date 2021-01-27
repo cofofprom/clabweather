@@ -10,6 +10,7 @@ typedef struct
 	int pressure;
 	int wSpeed;
 	char jawlenie[512];
+	int season;
 } RECORD;
 
 int readAllGreets(char buf[][512]);
@@ -23,6 +24,16 @@ int readAllWind(char buf[][512]);
 int readAllJawlenie(char buf[][512]);
 int readAllBye(char buf[][512]);
 
+int readHighWinter(char buf[][512]);
+int readLowWinter(char buf[][512]);
+int readAvWinter(char buf[][512]);
+int readHighSummer(char buf[][512]);
+int readLowSummer(char buf[][512]);
+int readAvSummer(char buf[][512]);
+int readHighOther(char buf[][512]);
+int readLowOther(char buf[][512]);
+int readAvOther(char buf[][512]);
+
 void printHello(FILE* out);
 void printDayTemp(int temp, FILE* out);
 void printDate(char* date, FILE* out);
@@ -32,3 +43,4 @@ void printPresure(int pr, FILE* out);
 void printWind(int wspeed, FILE* out);
 void printJawlenie(char* w, FILE* out);
 void printBye(FILE* out);
+void printReaction(int temp, int season, FILE* out);

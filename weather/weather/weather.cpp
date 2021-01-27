@@ -20,6 +20,9 @@ int main()
 	{
 		fscanf(dataIn, "%s", buf);
 		strcpy(list[flist].date, buf);
+		if (list[flist].date[3] == '0' && (list[flist].date[4] == '6' || list[flist].date[4] == '7' || list[flist].date[4] == '8')) list[flist].season = 0; // leto
+		else if (list[flist].date[3] == '0' && (list[flist].date[4] == '1' || list[flist].date[4] == '2') || (list[flist].date[3] == '1' && list[flist].date[4] == '2')) list[flist].season = 1; // zima
+		else list[flist].season = 2;
 		fscanf(dataIn, "%s", buf);
 		list[flist].dayTemp = atoi(buf);
 		fscanf(dataIn, "%s", buf);
@@ -39,21 +42,23 @@ int main()
 	for (int i = 0; i < flist; i++)
 	{
 		printHello(output);
-		//fprintf(output, " ");
+		fprintf(output, " ");
 		printDate(list[i].date, output);
-		//fprintf(output, " ");
+		fprintf(output, " ");
+		printReaction(list[i].dayTemp, list[i].season, output);
+		fprintf(output, " ");
 		printDayTemp(list[i].dayTemp, output);
-		//fprintf(output, " ");
+		fprintf(output, " ");
 		printNightTemp(list[i].nightTemp, output);
-		//fprintf(output, " ");
+		fprintf(output, " ");
 		printOsadki(list[i].osadki, output);
-		//fprintf(output, " ");
+		fprintf(output, " ");
 		printJawlenie(list[i].jawlenie, output);
-		//fprintf(output, " ");
+		fprintf(output, " ");
 		printPresure(list[i].pressure, output);
-		//fprintf(output, " ");
+		fprintf(output, " ");
 		printWind(list[i].wSpeed, output);
-		//fprintf(output, " ");
+		fprintf(output, " ");
 		printBye(output);
 		fprintf(output, "\n");
 	}
