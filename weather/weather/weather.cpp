@@ -45,6 +45,8 @@ int main()
 		fprintf(output, " ");
 		printDate(list[i].date, output);
 		fprintf(output, " ");
+		printReaction(list[i].dayTemp, list[i].season, output);
+		fprintf(output, " ");
 		printDayTemp(list[i].dayTemp, output);
 		fprintf(output, " ");
 		printNightTemp(list[i].nightTemp, output);
