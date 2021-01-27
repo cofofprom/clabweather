@@ -10,6 +10,7 @@ typedef struct
 	int pressure;
 	int wSpeed;
 	char jawlenie[512];
+	int season;
 } RECORD;
 
 int readAllGreets(char buf[][512]);
