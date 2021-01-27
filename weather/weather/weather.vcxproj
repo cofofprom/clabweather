@@ -156,12 +156,14 @@
     <ClCompile Include="weather.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="an_hight_winter.txt" />
     <Text Include="an_low_winter.txt" />
     <Text Include="Bye.txt" />
     <Text Include="data.txt" />
     <Text Include="Date.txt" />
     <Text Include="greet.txt" />
     <Text Include="Jawlenie.txt" />
+    <Text Include="norm_winter.txt" />
     <Text Include="Osadki.txt" />
     <Text Include="Pressure.txt" />
     <Text Include="Reactions.txt" />
