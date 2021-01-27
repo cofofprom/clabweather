@@ -177,7 +177,7 @@ int readAllBye(char buf[][512])
 
 int readHighWinter(char buf[][512])
 {
-	FILE* greetIn = fopen("Bye.txt", "r");
+	FILE* greetIn = fopen("an_hight_winter.txt", "r");
 
 	int bufc = 0;
 	char line[512] = { 0 };
@@ -211,7 +211,7 @@ int readLowWinter(char buf[][512])
 
 int readAvWinter(char buf[][512])
 {
-	FILE* greetIn = fopen("Bye.txt", "r");
+	FILE* greetIn = fopen("norm_winter.txt", "r");
 
 	int bufc = 0;
 	char line[512] = { 0 };
@@ -228,7 +228,7 @@ int readAvWinter(char buf[][512])
 
 int readHighSummer(char buf[][512])
 {
-	FILE* greetIn = fopen("Bye.txt", "r");
+	FILE* greetIn = fopen("an_hight_summer.txt", "r");
 
 	int bufc = 0;
 	char line[512] = { 0 };
@@ -245,7 +245,7 @@ int readHighSummer(char buf[][512])
 
 int readLowSummer(char buf[][512])
 {
-	FILE* greetIn = fopen("Bye.txt", "r");
+	FILE* greetIn = fopen("an_low_summer.txt", "r");
 
 	int bufc = 0;
 	char line[512] = { 0 };
@@ -262,7 +262,7 @@ int readLowSummer(char buf[][512])
 
 int readAvSummer(char buf[][512])
 {
-	FILE* greetIn = fopen("Bye.txt", "r");
+	FILE* greetIn = fopen("norm_summer.txt", "r");
 
 	int bufc = 0;
 	char line[512] = { 0 };
@@ -279,7 +279,7 @@ int readAvSummer(char buf[][512])
 
 int readHighOther(char buf[][512])
 {
-	FILE* greetIn = fopen("Bye.txt", "r");
+	FILE* greetIn = fopen("an_hight_double.txt", "r");
 
 	int bufc = 0;
 	char line[512] = { 0 };
@@ -296,7 +296,7 @@ int readHighOther(char buf[][512])
 
 int readLowOther(char buf[][512])
 {
-	FILE* greetIn = fopen("Bye.txt", "r");
+	FILE* greetIn = fopen("an_low_double.txt", "r");
 
 	int bufc = 0;
 	char line[512] = { 0 };
@@ -313,7 +313,7 @@ int readLowOther(char buf[][512])
 
 int readAvOther(char buf[][512])
 {
-	FILE* greetIn = fopen("Bye.txt", "r");
+	FILE* greetIn = fopen("norm_double.txt", "r");
 
 	int bufc = 0;
 	char line[512] = { 0 };
@@ -416,22 +416,29 @@ void printReaction(int temp, int season, FILE* out)
 	switch (season)
 	{
 	case 0:
-		if(temp >= 30) {}
-		else if(temp <= 10) {}
-		else {}
+		if(temp >= 30)
+			sz = readWinter(tTemplates);
+		else if(temp <= 10)
+			sz = readLowWinter(tTemplates);
+		else
+			sz = readLowWinter(tTemplates);
 		break;
 	case 1:
-		if (temp >= -5) {}
-		else if (temp <= -30) 
-		{
+		if (temp >= -5)
 			sz = readLowWinter(tTemplates);
-			fprintf(out, tTemplates[rand() % sz]);
-		}
-		else {}
+		else if (temp <= -30) 
+			sz = readLowWinter(tTemplates);
+		else
+			sz = readLowWinter(tTemplates);
 		break;
 	case 2:
-		if(temp >= 20) {}
-		else if (temp <= -5) {}
-		else {}
+		if(temp >= 20)
+			sz = readLowWinter(tTemplates);
+		else if (temp <= -5)
+			sz = readLowWinter(tTemplates);
+		else
+			sz = readLowWinter(tTemplates);
+		break;
 	}
+	fprintf(out, tTemplates[rand() % sz]);
 }
