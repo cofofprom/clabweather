@@ -9,7 +9,7 @@
 int main()
 {
 	setlocale(LC_ALL, "ru");
-	FILE* output = stdout;
+	FILE* output = fopen("out.txt", "w");
 	srand(time(0));
 	rand();
 	FILE* dataIn = fopen("data.txt", "r");
@@ -54,7 +54,7 @@ int main()
 	fprintf(output, "\n");
 
 
-
+	fclose(output);
 	return 0;
 }
 
