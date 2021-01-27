@@ -56,6 +56,9 @@
     <Text Include="TempNight.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
+    <Text Include="an_low_winter.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ReadTemplates.h">

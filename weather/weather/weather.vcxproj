@@ -156,6 +156,7 @@
     <ClCompile Include="weather.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="an_low_winter.txt" />
     <Text Include="Bye.txt" />
     <Text Include="data.txt" />
     <Text Include="Date.txt" />
