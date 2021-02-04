@@ -45,11 +45,11 @@ int main()
 		fprintf(output, " ");
 		printDate(list[i].date, output, rand());
 		fprintf(output, " ");
-		printReaction(list[i].dayTemp, list[i].season, output, rand());
-		fprintf(output, " ");
 		printDayTemp(list[i].dayTemp, output, rand());
 		fprintf(output, " ");
 		printNightTemp(list[i].nightTemp, output, rand());
+		fprintf(output, " ");
+		printReaction(list[i].dayTemp, list[i].season, output, rand());
 		fprintf(output, " ");
 		if (strcmp(list[i].osadki, "-") == 0)
 		{
