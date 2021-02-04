@@ -417,27 +417,27 @@ void printReaction(int temp, int season, FILE* out)
 	{
 	case 0:
 		if(temp >= 30)
-			sz = readWinter(tTemplates);
+			sz = readHighSummer(tTemplates);
 		else if(temp <= 10)
-			sz = readLowWinter(tTemplates);
+			sz = readLowSummer(tTemplates);
 		else
-			sz = readLowWinter(tTemplates);
+			sz = readAvSummer(tTemplates);
 		break;
 	case 1:
 		if (temp >= -5)
-			sz = readLowWinter(tTemplates);
+			sz = readHighWinter(tTemplates);
 		else if (temp <= -30) 
 			sz = readLowWinter(tTemplates);
 		else
-			sz = readLowWinter(tTemplates);
+			sz = readAvWinter(tTemplates);
 		break;
 	case 2:
 		if(temp >= 20)
-			sz = readLowWinter(tTemplates);
+			sz = readHighOther(tTemplates);
 		else if (temp <= -5)
-			sz = readLowWinter(tTemplates);
+			sz = readLowOther(tTemplates);
 		else
-			sz = readLowWinter(tTemplates);
+			sz = readAvOther(tTemplates);
 		break;
 	}
 	fprintf(out, tTemplates[rand() % sz]);
