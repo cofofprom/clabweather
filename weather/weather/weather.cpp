@@ -51,10 +51,18 @@ int main()
 		fprintf(output, " ");
 		printNightTemp(list[i].nightTemp, output, rand());
 		fprintf(output, " ");
-		printOsadki(list[i].osadki, output, rand());
-		fprintf(output, " ");
-		printJawlenie(list[i].jawlenie, output, rand());
-		fprintf(output, " ");
+		if (strcmp(list[i].osadki, "-") == 0)
+		{
+			printNoOsadki(output, rand());
+			fprintf(output, " ");
+		}
+		else
+		{
+			printOsadki(list[i].osadki, output, rand());
+			fprintf(output, " ");
+			printJawlenie(list[i].jawlenie, output, rand());
+			fprintf(output, " ");
+		}
 		printWind(list[i].wSpeed, output, rand());
 		fprintf(output, " ");
 		printPresure(list[i].pressure, output, rand());

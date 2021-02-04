@@ -442,3 +442,29 @@ void printReaction(int temp, int season, FILE* out, int dice)
 	}
 	fprintf(out, tTemplates[dice % sz]);
 }
+
+int readNoOsadki(char buf[][512])
+{
+	FILE* greetIn = fopen("net_osadki.txt", "r");
+
+	int bufc = 0;
+	char line[512] = { 0 };
+	while (fgets(line, 512, greetIn))
+	{
+		line[strlen(line) - 1] = 0;
+		strcpy(buf[bufc++], line);
+	}
+
+	fclose(greetIn);
+
+	return bufc;
+}
+
+void printNoOsadki(FILE* out, int dice)
+{
+	char tTemplates[20][512] = { 0 };
+	int sz = 0;
+	sz = readNoOsadki(tTemplates);
+
+	fprintf(out, tTemplates[dice % sz], out);
+}
