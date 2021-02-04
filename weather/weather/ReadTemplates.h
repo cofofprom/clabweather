@@ -23,6 +23,7 @@ int readAllPressure(char buf[][512]);
 int readAllWind(char buf[][512]);
 int readAllJawlenie(char buf[][512]);
 int readAllBye(char buf[][512]);
+int readNoOsadki(char buf[][512]);
 
 int readHighWinter(char buf[][512]);
 int readLowWinter(char buf[][512]);
@@ -44,3 +45,4 @@ void printWind(int wspeed, FILE* out, int dice);
 void printJawlenie(char* w, FILE* out, int dice);
 void printBye(FILE* out, int dice);
 void printReaction(int temp, int season, FILE* out, int dice);
+void printNoOsadki(FILE* out, int dice);
