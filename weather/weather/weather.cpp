@@ -55,9 +55,9 @@ int main()
 		fprintf(output, " ");
 		printJawlenie(list[i].jawlenie, output, rand());
 		fprintf(output, " ");
-		printPresure(list[i].pressure, output, rand());
-		fprintf(output, " ");
 		printWind(list[i].wSpeed, output, rand());
+		fprintf(output, " ");
+		printPresure(list[i].pressure, output, rand());
 		fprintf(output, " ");
 		printBye(output, rand());
 		fprintf(output, "\n");
