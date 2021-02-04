@@ -10,9 +10,9 @@ int main()
 {
 	setlocale(LC_ALL, "ru");
 	FILE* output = fopen("out.txt", "w");
-	srand(time(0));
-	rand();
 	FILE* dataIn = fopen("data.txt", "r");
+	srand(time(0));
+	//rand();
 	char buf[1024] = { 0 };
 	RECORD list[10] = { 0 };
 	int flist = 0;
@@ -41,25 +41,25 @@ int main()
 	// приветствие дата (рандомно температура) (рандомно осадки или явления) (рандомно давление или скорость ветра) прощание
 	for (int i = 0; i < flist; i++)
 	{
-		printHello(output);
+		printHello(output, rand());
 		fprintf(output, " ");
-		printDate(list[i].date, output);
+		printDate(list[i].date, output, rand());
 		fprintf(output, " ");
-		printReaction(list[i].dayTemp, list[i].season, output);
+		printReaction(list[i].dayTemp, list[i].season, output, rand());
 		fprintf(output, " ");
-		printDayTemp(list[i].dayTemp, output);
+		printDayTemp(list[i].dayTemp, output, rand());
 		fprintf(output, " ");
-		printNightTemp(list[i].nightTemp, output);
+		printNightTemp(list[i].nightTemp, output, rand());
 		fprintf(output, " ");
-		printOsadki(list[i].osadki, output);
+		printOsadki(list[i].osadki, output, rand());
 		fprintf(output, " ");
-		printJawlenie(list[i].jawlenie, output);
+		printJawlenie(list[i].jawlenie, output, rand());
 		fprintf(output, " ");
-		printPresure(list[i].pressure, output);
+		printPresure(list[i].pressure, output, rand());
 		fprintf(output, " ");
-		printWind(list[i].wSpeed, output);
+		printWind(list[i].wSpeed, output, rand());
 		fprintf(output, " ");
-		printBye(output);
+		printBye(output, rand());
 		fprintf(output, "\n");
 	}
 
