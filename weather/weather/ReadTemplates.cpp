@@ -328,88 +328,88 @@ int readAvOther(char buf[][512])
 	return bufc;
 }
 
-void printHello(FILE* out)
+void printHello(FILE* out, int dice)
 {
 	char tTemplates[20][512] = { 0 };
 	int sz = 0;
 	sz = readAllGreets(tTemplates);
 
-	fprintf(out, tTemplates[rand() % sz]);
+	fprintf(out, tTemplates[dice % sz]);
 }
 
-void printDayTemp(int temp, FILE* out)
+void printDayTemp(int temp, FILE* out, int dice)
 {
 	char tTemplates[20][512] = { 0 };
 	int sz = 0;
 	sz = readAllTemp(tTemplates);
 
-	fprintf(out, tTemplates[rand() % sz], temp);
+	fprintf(out, tTemplates[dice % sz], temp);
 }
 
-void printDate(char* date, FILE* out)
+void printDate(char* date, FILE* out, int dice)
 {
 	char tTemplates[20][512] = { 0 };
 	int sz = 0;
 	sz = readAllDate(tTemplates);
 
-	fprintf(out, tTemplates[rand() % sz], date);
+	fprintf(out, tTemplates[dice % sz], date);
 }
 
-void printNightTemp(int temp, FILE* out)
+void printNightTemp(int temp, FILE* out, int dice)
 {
 	char tTemplates[20][512] = { 0 };
 	int sz = 0;
 	sz = readAllTempNight(tTemplates);
 
-	fprintf(out, tTemplates[rand() % sz], temp);
+	fprintf(out, tTemplates[dice % sz], temp);
 }
 
-void printOsadki(char* os, FILE* out)
+void printOsadki(char* os, FILE* out, int dice)
 {
 	char tTemplates[20][512] = { 0 };
 	int sz = 0;
 	sz = readAllOsadki(tTemplates);
 
-	fprintf(out, tTemplates[rand() % sz], os);
+	fprintf(out, tTemplates[dice % sz], os);
 }
 
-void printPresure(int pr, FILE* out)
+void printPresure(int pr, FILE* out, int dice)
 {
 	char tTemplates[20][512] = { 0 };
 	int sz = 0;
 	sz = readAllPressure(tTemplates);
 
-	fprintf(out, tTemplates[rand() % sz], pr);
+	fprintf(out, tTemplates[dice % sz], pr);
 }
 
-void printWind(int wspeed, FILE* out)
+void printWind(int wspeed, FILE* out, int dice)
 {
 	char tTemplates[20][512] = { 0 };
 	int sz = 0;
 	sz = readAllWind(tTemplates);
 
-	fprintf(out, tTemplates[rand() % sz], wspeed);
+	fprintf(out, tTemplates[dice % sz], wspeed);
 }
 
-void printJawlenie(char* w, FILE* out)
+void printJawlenie(char* w, FILE* out, int dice)
 {
 	char tTemplates[20][512] = { 0 };
 	int sz = 0;
 	sz = readAllJawlenie(tTemplates);
 
-	fprintf(out, tTemplates[rand() % sz], w);
+	fprintf(out, tTemplates[dice % sz], w);
 }
 
-void printBye(FILE* out)
+void printBye(FILE* out, int dice)
 {
 	char tTemplates[20][512] = { 0 };
 	int sz = 0;
 	sz = readAllBye(tTemplates);
 
-	fprintf(out, tTemplates[rand() % sz]);
+	fprintf(out, tTemplates[dice % sz]);
 }
 
-void printReaction(int temp, int season, FILE* out)
+void printReaction(int temp, int season, FILE* out, int dice)
 {
 	char tTemplates[20][512] = { 0 };
 	int sz = 0;
@@ -440,5 +440,5 @@ void printReaction(int temp, int season, FILE* out)
 			sz = readAvOther(tTemplates);
 		break;
 	}
-	fprintf(out, tTemplates[rand() % sz]);
+	fprintf(out, tTemplates[dice % sz]);
 }
