@@ -29,9 +29,6 @@
     <Text Include="greet.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
-    <Text Include="Reactions.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
     <Text Include="Temp.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>

@@ -173,7 +173,6 @@
     <Text Include="norm_winter.txt" />
     <Text Include="Osadki.txt" />
     <Text Include="Pressure.txt" />
-    <Text Include="Reactions.txt" />
     <Text Include="Temp.txt" />
     <Text Include="TempNight.txt" />
     <Text Include="Wind.txt" />
