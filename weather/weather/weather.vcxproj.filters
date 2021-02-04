@@ -83,6 +83,9 @@
     <Text Include="norm_double.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
+    <Text Include="net_osadki.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ReadTemplates.h">

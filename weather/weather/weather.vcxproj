@@ -167,6 +167,7 @@
     <Text Include="Date.txt" />
     <Text Include="greet.txt" />
     <Text Include="Jawlenie.txt" />
+    <Text Include="net_osadki.txt" />
     <Text Include="norm_double.txt" />
     <Text Include="norm_summer.txt" />
     <Text Include="norm_winter.txt" />
