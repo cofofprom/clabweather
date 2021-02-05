@@ -12,7 +12,7 @@ int main()
 	FILE* output = fopen("out.txt", "w");
 	FILE* dataIn = fopen("data.txt", "r");
 	srand(time(0));
-	//rand();
+	rand();
 	char buf[1024] = { 0 };
 	RECORD list[10] = { 0 };
 	int flist = 0;
@@ -37,7 +37,7 @@ int main()
 		strcpy(list[flist].jawlenie, buf);
 		flist++;
 	}
-
+	fclose(dataIn);
 	// приветствие дата (рандомно температура) (рандомно осадки или явления) (рандомно давление или скорость ветра) прощание
 	for (int i = 0; i < flist; i++)
 	{
